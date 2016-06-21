@@ -6,7 +6,7 @@ var SweetSelector = {
   select: function(selector){
     if (selector.includes("#")){
       return document.getElementById(selector.substring(1));
-    } else if (selector.includes(".")){
+    } else if(selector.includes(".")){
       return document.getElementsByClassName(selector.substring(1));
     } else {
       return document.getElementsByTagName(selector);
@@ -168,13 +168,15 @@ var miniQuery = function(selector) {
   },
   domElement.trigger = function(eventName){
   EventDispatcher.trigger(selector, eventName)
-  },
-  ajax: function(){
-    AjaxWrapper.
   }
 
 
 return domElement;
 }
+
+miniQuery.ready = function(callback) {
+  document.addEventListener('DOMContentLoaded', callback.call())
+  }
+ var $ = miniQuery;
 
 
