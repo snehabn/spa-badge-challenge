@@ -25,7 +25,6 @@ $.ready(function(){
 
   // Pass our data to the template
   var theCompiledHtml = theTemplate(context);
-  debugger;
   // Add the compiled html to the page
   $('.content-placeholder')[0].innerHTML=theCompiledHtml
 
