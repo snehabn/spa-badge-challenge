@@ -28,7 +28,26 @@ $.ready(function(){
   // Add the compiled html to the page
   $('.content-placeholder')[0].innerHTML=theCompiledHtml
 
+
+
+$('a').on('click', function(event){
+  console.log("click works")
+event.preventDefault();
+
+
+});
+
+
 }).catch(function(){
   console.log("error");
 })
+
+
+
+
+
+
+
+
+
 });

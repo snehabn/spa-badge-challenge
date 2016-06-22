@@ -74,12 +74,17 @@ var EventDispatcher = {
   event: null,
   on: function (selector, eventName, callback){
    this.event = new Event(eventName);
-   var el = SweetSelector.select(selector)[0];
-   el.addEventListener(eventName, callback,  false);
+   var el = SweetSelector.select(selector);
+   for (var i=0; i < el.length; i++) {
+   el[i].addEventListener(eventName, callback,  false);
+ }
+
  },
  trigger: function (selector, eventName){
-  var el = SweetSelector.select(selector)[0];
-  el.dispatchEvent(this.event)
+  var el = SweetSelector.select(selector);
+  for (var i=0; i < el.length; i++) {
+  el[i].dispatchEvent(this.event)
+}
 }
 };
 
