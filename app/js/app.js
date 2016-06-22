@@ -16,13 +16,12 @@ $.ready(function(){
   // Define our data object
   var parsed = JSON.parse(data);
   var arr = [];
-  for (var x in parsed){
-    arr.push(parsed[x])
-  }
+    for (var x in parsed){
+      arr.push(parsed[x])
+    }
   var context = {
     arr: arr
   }
-
   // Pass our data to the template
   var theCompiledHtml = theTemplate(context);
   // Add the compiled html to the page
