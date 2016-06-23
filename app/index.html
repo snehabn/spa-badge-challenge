@@ -17,7 +17,7 @@
 <!--Data will be inserted in its according place, replacing the brackets.-->
 <script id="teachers-template" type="text/x-handlebars-template">
   {{#each arr}}
-      <p><a href="http://spa-badge-api.herokuapp.com/teachers/{{{id}}}">{{name}}</a></p>
+      <p><a href="http://spa-badge-api.herokuapp.com/teachers/{{{id}}}">{{name}}</a><div class="teach-info">{{phrase}}</div></p>
   {{/each}}
 </script>
 
